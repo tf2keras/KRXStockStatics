@@ -1,0 +1,11 @@
+# Requirements
+1. matplotlib
+ - pip install matplotlib
+ - if pip does not work, use get-pip.py
+2. FinanceDataReader
+ - pip install -U finance-datareader
+ -- Microsoft Visual C++ 14.0 is required (https://wiki.python.org/moin/WindowsCompilers#Which_Microsoft_Visual_C.2B-.2B-_compiler_to_use_with_a_specific_Python_version_.3F)
+ --- Download link: https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017
+ -- lxml is needed to install finance-datareader.
+ --- Download link: https://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml
+ --- pip install downloaded_file_path (I useded lxml-4.2.3-cp37xxx, which is included in git repository)
