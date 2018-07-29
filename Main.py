@@ -120,22 +120,22 @@ def main():
     print(companies_above_target_price_dict)
     print(companies_above_profit_target_price_dict)
 
-    with open("D{}_C{}_K{:.3f}_P{}_L{}_00.csv".format(lookup_days, daily_num, k, profit_percent, list_type),
+    with open("D{}_C{}_K{:.1f}_P{}_L{}_00.csv".format(lookup_days, daily_num, k, profit_percent, list_type),
               'w', newline='') as my_file:
         wr = csv.writer(my_file, quoting=csv.QUOTE_ALL)
         for key, value in above_target_price_dict.items():
             wr.writerow([key] + value)
-    with open("D{}_C{}_K{:.3f}_P{}_L{}_01.csv".format(lookup_days, daily_num, k, profit_percent, list_type),
+    with open("D{}_C{}_K{:.1f}_P{}_L{}_01.csv".format(lookup_days, daily_num, k, profit_percent, list_type),
               'w', newline='') as my_file:
         wr = csv.writer(my_file, quoting=csv.QUOTE_ALL)
         for key, value in above_profit_target_price_dict.items():
             wr.writerow([key] + value)
-    with open("D{}_C{}_K{:.3f}_P{}_L{}_02.csv".format(lookup_days, daily_num, k, profit_percent, list_type),
+    with open("D{}_C{}_K{:.1f}_P{}_L{}_02.csv".format(lookup_days, daily_num, k, profit_percent, list_type),
               'w', newline='') as my_file:
         wr = csv.writer(my_file, quoting=csv.QUOTE_ALL)
         for key, value in companies_above_target_price_dict.items():
             wr.writerow([key] + value)
-    with open("D{}_C{}_K{:.3f}_P{}_L{}_03.csv".format(lookup_days, daily_num, k, profit_percent, list_type),
+    with open("D{}_C{}_K{:.1f}_P{}_L{}_03.csv".format(lookup_days, daily_num, k, profit_percent, list_type),
               'w', newline='') as my_file:
         wr = csv.writer(my_file, quoting=csv.QUOTE_ALL)
         for key, value in companies_above_profit_target_price_dict.items():
