@@ -1,3 +1,5 @@
+# Python 3.7 is used.
+
 # Requirements
 1. matplotlib
  - pip install matplotlib
@@ -9,3 +11,18 @@
  -- lxml is needed to install finance-datareader.
  --- Download link: https://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml
  --- pip install downloaded_file_path (I used lxml-4.2.3-cp37xxx, which is included in git repository)
+
+ # git에 venv로 필요 라이브러리를 모두 포함시켜놓았으나, 혹시 해당 컴퓨터에서 작동하지 않을 경우 다음 사항을 확인해주세요.
+
+ # 필요 라이브러리
+ 1. matplotlib
+  - pip install matplotlib 를 통해 설치
+  - pip가 작동하지 않을 경우 첨부한 get-pip.py를 python get-pip.py 를 통해 실행시켜 pip 재설치 후 재시도.
+ 2. FinanceDataReader
+  - pip install -U finance-datareader 를 통해 설치
+  -- Microsoft Visual Studio가 설치되지 않은 경우 Microsoft Visual C++ 14.0을 별도로 설치해야 함.
+  --- 다운로드 링크: https://wiki.python.org/moin/WindowsCompilers#Which_Microsoft_Visual_C.2B-.2B-_compiler_to_use_with_a_specific_Python_version_.3F
+  -- lxml 의존성이 요구될 경우 다음을 통해 설치
+  --- 다운로드 링크: https://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml
+  --- pip install '다운로드한 파일 경로' (lxml-4.2.4-cp37xxx 파일을 첨부함)
+
