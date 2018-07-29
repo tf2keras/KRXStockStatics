@@ -8,4 +8,4 @@
  --- Download link: https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017
  -- lxml is needed to install finance-datareader.
  --- Download link: https://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml
- --- pip install downloaded_file_path (I useded lxml-4.2.3-cp37xxx, which is included in git repository)
+ --- pip install downloaded_file_path (I used lxml-4.2.3-cp37xxx, which is included in git repository)
