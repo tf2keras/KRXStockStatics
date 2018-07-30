@@ -77,7 +77,7 @@ def main():
                 # 인지를 체크해야 합니다. 예를 들어 제가 목표로하는 수익률이 1%라고 하면
                 # target price * 1.01 < Max price 이런식입니다.
                 # Save above result to another dictionary.
-                if (profit_percent/100.0)*(item[4] + k*(prev_day_item[5] - prev_day_item[6])) < item[5]:
+                if ((100.0+profit_percent)/100.0)*(item[4] + k*(prev_day_item[5] - prev_day_item[6])) < item[5]:
                     if item[0] in above_profit_target_price_dict:
                         above_profit_target_price_dict[item[0]] = above_profit_target_price_dict[item[0]] \
                                                            + [[1, item[1], item[2], prev_day_item[5] - prev_day_item[6]]]
