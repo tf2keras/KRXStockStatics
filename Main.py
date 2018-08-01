@@ -51,6 +51,8 @@ def main():
             # date(0), symbol(1), name(2), close(3), open(4), high(5), low(6), volume(7), change(8)
             for item in [[x[0].to_pydatetime().strftime('%Y-%m-%d'), key, value] + list(x[1])
                          for x in zip(df.index.tolist(), df.values)]:
+                if dt.strptime(item[0], '%Y-%m-%d').weekday() in [5, 6]:
+                    continue    # 5=saturday, 6=sunday
                 if prev_day_item is None:
                     prev_day_item = item
                     continue
