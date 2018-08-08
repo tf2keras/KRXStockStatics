@@ -22,6 +22,8 @@ def main():
 
     """ Main program """
     '''Input options'''
+    # only_this_day = None    # if this value is not none, only values for this specific day are computed.
+    only_this_day = '2018-02-06'     # This may not be time for Korea. differs one day?
     lookup_days = 10
     daily_num = 3
     k = 0.5
@@ -44,7 +46,12 @@ def main():
     for key, value in company_symbol_name_dict.items():
         print("{}/{} Calculating...".format(lookup_item_idx+1, len(company_symbol_name_dict)))
         try:
-            df = Fdr.DataReader(key, (dt.now() - td(days=lookup_days)).strftime('%Y-%m-%d'))
+            if only_this_day is None:
+                df = Fdr.DataReader(key, (dt.now() - td(days=lookup_days)).strftime('%Y-%m-%d'))
+            else:
+                df = Fdr.DataReader(key, only_this_day, only_this_day)
+                print(value)
+                print(df)
 
             prev_day_item = None
             # ['2018-07-19', '001040', 'CJ', 139000.0, 144500.0, 146500.0, 138500.0, 656d20.0, -0.0381]
