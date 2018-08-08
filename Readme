@@ -13,6 +13,7 @@
  --- pip install downloaded_file_path (I used lxml-4.2.3-cp37xxx, which is included in git repository)
 
  # git에 venv로 필요 라이브러리를 모두 포함시켜놓았으나, 혹시 해당 컴퓨터에서 작동하지 않을 경우 다음 사항을 확인해주세요.
+ # venv를 제거하였습니다. docx파일을 따라 환경설정을 해 주세요.
 
  # 필요 라이브러리
  1. matplotlib
